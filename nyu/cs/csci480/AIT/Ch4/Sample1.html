@@ -1,0 +1,62 @@
+<html>
+
+    <head>
+        <script>
+            // Arrays:
+            var listNumbers = [2, 3, 5, 7, 11];
+            console.log(listNumbers);
+            console.log(listNumbers[1]);
+            console.log(listNumbers[0]);
+            
+            // Methods
+            var doh = "Doh";
+            console.log(typeof doh.toUpperCase);
+            console.log(doh.toUpperCase());
+            
+            
+            // Stack
+            var itemsInStore = [];
+            itemsInStore.push("Pen");
+            itemsInStore.push("Pencil");
+            itemsInStore.push("Notebooks");
+            console.log(itemsInStore);
+            console.log(itemsInStore.join(" "));
+            console.log(itemsInStore.pop());
+            console.log(itemsInStore);
+            
+            
+            // Objects 1
+            var killOneSelf = {
+                meaningLife: true,
+                attributes: ["health", "able", "not so shy", "mountains to climb", "treks to walk", "places to go"]
+            };
+            console.log(killOneSelf.meaningLife);
+            if(killOneSelf.meaningLife){
+                console.log("Do not kill yourself");
+                console.log("Reasons: ");
+               
+                for(var i = 0; i < killOneSelf.attributes.length;i++)
+                    console.log(killOneSelf.attributes[i]);
+            } else {
+                console.log("Just do it.");
+            }
+            
+            // Objects 2
+            var directions = {left: "a", right:"b", up: "w", down: "s"};
+            console.log(directions.left);
+            
+            delete directions.left;
+            
+            console.log(directions.left);
+            
+            console.log("Left in directions: "+("left" in directions));            
+            console.log("Right in directions: "+("right" in directions));
+            
+            
+            
+        </script>
+    </head>
+
+    <body>
+    </body>
+</html>

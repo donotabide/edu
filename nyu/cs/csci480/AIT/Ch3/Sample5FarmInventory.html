@@ -1,0 +1,57 @@
+<html>
+<head>
+    <script>     
+        // 1st TRIE
+        function printMarketInventory(pens, pencils) { 
+            var penString = String(pens);
+            while (penString.length < 3)
+                penString = "0"+penString;
+            console.log(penString + " Pens");
+            var pencilString = String(pencils); 
+            while(pencilString.length < 3)
+                pencilString = "0" + pencilString;
+            console.log(pencilString + " Pencils");
+        }
+        printMarketInventory(7, 11);
+        
+        // 2nd Trie
+        function printZeroPadded(number, label){
+            var numberString = String(number);
+            
+            while(numberString.length < 3)
+                numberString = "0"+numberString;
+            
+            console.log(numberString+" "+label);
+        }
+    
+        function printMarketInventoryMore(pens, pencils, notebooks){
+            printZeroPadded(pens, "pens");
+            printZeroPadded(pencils, "pencils");
+            printZeroPadded(notebooks, "notebooks");
+        }
+        
+        printMarketInventoryMore(4, 21, 2);
+        
+        // better
+        function zeroPad(number, width){
+            var string = String(number);
+            while(string.length < width)
+                string = "0"+string;
+            return string;
+        }
+        
+        function printMarketInventoryBetter(pens, pencils, notebooks){
+            console.log(zeroPad(pens, 5)+" Pens");
+            console.log(zeroPad(pencils, 5)+" Pencils");
+            console.log(zeroPad(notebooks, 5)+" Notebooks");
+        }
+        
+        printMarketInventoryBetter(3, 31, 412);
+        
+        
+    </script>
+
+</head>
+    <body>
+    </body>
+</html>

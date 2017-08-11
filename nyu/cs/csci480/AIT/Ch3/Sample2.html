@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            var x = "out";
+            
+            var f1 = function(){
+                var x = "in f1";
+            };
+            f1();
+            
+            console.log(x);
+            
+            var f2 = function(){
+                x = "in f2";
+            };
+            
+            f2();
+            console.log(x);
+            
+        </script>
+    </head>
+
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            var landscape = function(){
+                var result = "";
+                var flat = function(size){
+                    for(var count=0; count<size; count++)
+                        result+="_";
+                }
+                
+                var mountain = function(size){
+                    result+= "/";
+                    for(var count=0; count<size; count++)
+                        result+="'";
+                    result+="\\";
+                }
+                
+                flat(3);
+                mountain(2);
+                mountain(5);
+                mountain(2)
+                flat(3);
+                return result;
+            };
+            
+            console.log(landscape());
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

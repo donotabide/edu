@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            var isEven = function(number){
+                if(number == 0)
+                    return true;
+                else if (number == 1)
+                    return false;
+                
+                return isEven(number-2);
+            }   
+            
+            if(isEven(Number(prompt("Enter a number"))))
+                console.log("The number is even");
+            else
+                console.log("The number is odd");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
