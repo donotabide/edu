@@ -1,5 +1,6 @@
 package edu.nyu.cs.csci470.OODP.Ch1;
 
+
 import java.lang.*;
 import java.util.*;
 
@@ -17,6 +18,24 @@ public class Greet{
 	{
 		name = nameIn; 		
 	}
+
+	/** 
+		Method that tries to copy the lenght of the name
+		@para size tries to pass an integer as parameter to be changed by reference. 
+	*/
+	public void copyLengthTo(int size)
+	{
+		size = name.length();	
+	}
+
+	/** 
+		Method that tries to object Greet to other.
+		@param other other Greet object that is tried to be set as current Greet object.
+	*/
+	public void copyGreetTo(Greet other)
+	{
+		other =  new Greet(name);
+	} 
 
 	/**
 		Greet with "Sup" message.
@@ -79,6 +98,15 @@ public class Greet{
 	{
 		return Math.round(Math.sqrt(number));	
 	}
+	
+	/**
+		Method that sets Greet to null
+		@param GreetObj
+	*/	
+	public void greetNull(Greet obj)
+	{
+		obj = null;
+	}
 
 	/**
 		Testing Greet
@@ -87,14 +115,26 @@ public class Greet{
 	{
 		Greet greet1 = new Greet(args[0]);
 				
-			System.out.println(greet1.greet());
-			System.out.println(greet1.sayGoodbye());
-			System.out.println(greet1.saySomething());
+		System.out.println(greet1.greet());
+		System.out.println(greet1.sayGoodbye());
+		System.out.println(greet1.saySomething());
 	
-			Greet greet2 = greet1;
-			greet2.setName(args[2]);
-			System.out.println(greet2.greet());
-			System.out.println(greet1.greet());			
+		Greet greet2 = greet1;
+		greet2.setName(args[2]);
+		System.out.println(greet2.greet());
+		System.out.println(greet1.greet());			
+		//greet1 = null;
+
+		System.out.println(greet1.greet());
+		
+		int size = 0;
+		System.out.println("Size before: "+size);
+		greet1.copyLengthTo(size);
+		System.out.println("Size after: "+size);
+		
+		Greet greet3;
+		greet1.copyGreetTo(greet3);
+		System.out.println("Name 3: "+greet3.saySomething()); 
 	}
 
 	private String name;

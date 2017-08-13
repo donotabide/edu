@@ -28,5 +28,6 @@ public class GreetTest
 		System.out.println(greetWorld.sayGoodbye());
 		System.out.println(moreGreet.sayGoodbye());
 		System.out.println(moreGreet2.sayGoodbye());
+	
 	}
 }

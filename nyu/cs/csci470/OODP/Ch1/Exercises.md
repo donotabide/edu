@@ -23,4 +23,18 @@
 		then by setting another name with
 		setName method, both end up changing.
 	'''
+### Ex12:
+	''' 
+		It gives NullPointerException.
+		The number given in the end of the file
+		is the number of the line. 
+	'''
+
+### Ex13: 
+	'''
+		variable greet3 might not have been initialized
+		greet1.copyGreetTo(greet3);
+	'''
+
+### Ex14: 
 
