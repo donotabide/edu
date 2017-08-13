@@ -1,5 +1,9 @@
 package edu.nyu.cs.csci470.OODP.Ch1;
 
+import java.lang.*;
+import java.util.*;
+
+
 /**
 	Class for creating regular greetings
 */
@@ -21,6 +25,18 @@ public class Greet{
 	public String greet()
 	{
 		return "Sup, " + name + "!";
+	}
+	
+	/**
+		Methods that uses a random generator to either say "Hello" or "Goodbye".
+		@return string 
+	*/	
+	public String saySomething()
+	{
+		if (generateRandom.nextBoolean())
+			return "Sup, " + name + "!";
+		else 
+			return "Later, " + name + "!";
 	}
 
 	/**
@@ -49,7 +65,7 @@ public class Greet{
 	{
 		this.name = other.name;
 	}
-	
+		
 	/**
 		Says goodbye to entity.
 		@param name is a reference to the name.		
@@ -59,15 +75,30 @@ public class Greet{
 		return "Goodbye, "+name; 	
 	}
 	
+	public long retLongSqrt(float number)
+	{
+		return Math.round(Math.sqrt(number));	
+	}
+
 	/**
 		Testing Greet
 	*/
 	public static void main(String[] args)
 	{
 		Greet greet1 = new Greet(args[0]);
-		System.out.println(greet1.greet());
-		System.out.println(greet1.sayGoodbye());
+				
+			System.out.println(greet1.greet());
+			System.out.println(greet1.sayGoodbye());
+			System.out.println(greet1.saySomething());
+	
+			Greet greet2 = greet1;
+			greet2.setName(args[2]);
+			System.out.println(greet2.greet());
+			System.out.println(greet1.greet());			
 	}
+
 	private String name;
+	private static Random generateRandom = new Random();
+	
 
 }

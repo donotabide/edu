@@ -1,7 +1,10 @@
 package edu.nyu.cs.csci470.OODP.Ch1;
 
 public class GreetTest
-{
+{	
+	/**
+		@param args unused
+	*/
 	public static void main(String[] args)
 	{
 		Greet greetWorld = new Greet("World");
@@ -12,7 +15,7 @@ public class GreetTest
 		String moreGreeting = moreGreet.greet();
 		System.out.println(moreGreeting);
 		
-		greetWorld.setName("Dudes");
+		greetWorld.setName("Jos\u00E9 \u03A0 \u3076 \u0346 \u0743");
 		System.out.println(greetWorld.greet());
 		System.out.println(moreGreet.greet());
 			
