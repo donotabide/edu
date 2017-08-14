@@ -1,4 +1,4 @@
-package edu.nyu.cs.csci470.OODP.Ch1;
+package edu.nyu.cs.csci470.OODP.Ch1.Greet;
 
 public class GreetTest
 {	
@@ -28,6 +28,11 @@ public class GreetTest
 		System.out.println(greetWorld.sayGoodbye());
 		System.out.println(moreGreet.sayGoodbye());
 		System.out.println(moreGreet2.sayGoodbye());
-	
+		
+		// Ex17
+		Greet ex17a = new Greet(args[0]);
+		Greet ex17b = new Greet(args[1]);
+		System.out.println(ex17a.saySomething());
+		System.out.println(ex17b.saySomething());
 	}
 }

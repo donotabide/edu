@@ -36,5 +36,28 @@
 		greet1.copyGreetTo(greet3);
 	'''
 
-### Ex14: 
+### Ex14: Write a method void swapNames(Greeter other) of the Greeter class that swaps the names of this greeter and another.
 
+	'''
+		Done, check Ex4 in Greet.java
+
+	'''
+
+### Ex15: Write a program in which Greeter is in the package edu.sjsu.cs.yourcourse.yourname and GreeterTester is in the default package. Into which directories do you put the source files and the class files?
+
+
+### Ex16: What is wrong with the following code snippet?
+   ArrayList<String> strings;
+   strings.add("France");
+	''' 
+		strings needs to be initialized:
+		'''
+			ArrayList<String> strings = new List<String>(); 
+		'''
+    	'''
+
+### Ex17: Write a GreeterTester program that constructs Greeter objects for all command-line arguments and prints out the results of calling sayHello. For example, if your program is invoked as
+   java GreeterTester Mars Venus
+	'''
+		Done: See Ex17 in GreetTest.java
+	'''

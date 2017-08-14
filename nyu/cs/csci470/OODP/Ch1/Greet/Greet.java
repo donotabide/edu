@@ -1,4 +1,4 @@
-package edu.nyu.cs.csci470.OODP.Ch1;
+package edu.nyu.cs.csci470.OODP.Ch1.Greet;
 
 
 import java.lang.*;
@@ -28,6 +28,20 @@ public class Greet{
 		size = name.length();	
 	}
 
+	/**
+		Method that asks and stores user name
+		@param userName Scanner to ask name
+		@print greeting
+	*/
+	public void askAndGreet()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("What is your name, user?");
+		this.name = in.nextLine();
+		in.close();
+		System.out.println(this.saySomething());
+	}
+	
 	/** 
 		Method that tries to object Greet to other.
 		@param other other Greet object that is tried to be set as current Greet object.
@@ -109,6 +123,17 @@ public class Greet{
 	}
 
 	/**
+		Ex4: Method to swap the names between greet objects
+		@param other Greet object to have names swapped
+	*/
+	public void swapNames(Greet other)
+	{
+		String temp = this.name;
+		this.setName(other.name);
+		other.setName(temp);	
+	}
+
+	/**
 		Testing Greet
 	*/
 	public static void main(String[] args)
@@ -119,8 +144,7 @@ public class Greet{
 		System.out.println(greet1.sayGoodbye());
 		System.out.println(greet1.saySomething());
 	
-		Greet greet2 = greet1;
-		greet2.setName(args[2]);
+		Greet greet2 = new Greet(args[2]);
 		System.out.println(greet2.greet());
 		System.out.println(greet1.greet());			
 		//greet1 = null;
@@ -132,9 +156,15 @@ public class Greet{
 		greet1.copyLengthTo(size);
 		System.out.println("Size after: "+size);
 		
-		Greet greet3;
-		greet1.copyGreetTo(greet3);
-		System.out.println("Name 3: "+greet3.saySomething()); 
+		//Greet greet3;
+		//greet1.copyGreetTo(greet3);
+		//System.out.println("Name 3: "+greet3.saySomething()); 
+		
+		// Ex 14 - Using swaps
+		greet1.swapNames(greet2);
+		System.out.println(greet1.saySomething());
+		System.out.println(greet2.saySomething());
+		greet1.askAndGreet();
 	}
 
 	private String name;
